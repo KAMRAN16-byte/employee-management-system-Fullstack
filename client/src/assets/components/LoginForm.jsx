@@ -43,6 +43,7 @@ const LoginForm = ({role,title,subtitle}) => {
                         <input type = {showPassword ? 'text' : 'password'} placeholder={'••••••••'} value={password} onChange={ (e) => setPassword(e.target.value)} required={true} className={'pr-11'}/>
                         <button></button>
                     </div>
+
                 </form>
 
 
