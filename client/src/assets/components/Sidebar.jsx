@@ -17,19 +17,19 @@ const Sidebar = () => {
         setMobileOpen(false);
     }, [pathname]);
 
-    const toggleMenu = () => {
-        setMobileOpen(!mobileOpen);
+    const toggleMenu = (value) => {
+        setMobileOpen(value);
     }
 
     return (
         <>
             {/* Mobile Menu Button*/}
-            <button onClick={toggleMenu} className={'lg:hidden fixed top-4 left-4 z-50 p-2 bg-black/15 text-black rounded-lg shadow-lg border border-white/20 active:scale-85 transition-transform duration-150'}>
+            <button onClick={() => toggleMenu(!mobileOpen)} className={'lg:hidden fixed top-4 left-4 z-50 p-2 bg-black/15 text-black rounded-lg shadow-lg border border-white/20 active:scale-85 transition-transform duration-150'}>
                 {mobileOpen ? <X size={20}/> : <MenuIcon size={20}/>}
             </button>
 
             {/* Mobile Overlay */}
-            {mobileOpen && <div className={'lg:hidden fixed inset-0 bg-black/20 backdrop-blur-[2px] z-40'} onClick={toggleMenu} />}
+            {mobileOpen && <div className={'lg:hidden fixed inset-0 bg-black/20 backdrop-blur-[2px] z-40'} onClick={ () => toggleMenu(false)} />}
 
         </>
     );
