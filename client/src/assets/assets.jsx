@@ -1,3 +1,14 @@
+import EmployeeIcon from "./resource/04.png"
+import MaleEmployeeIcon from "./resource/Male_Employee.png"
+import FemaleEmployeeIcon from "./resource/Female_Employee.png.png"
+export const assets = {
+    EmployeeIcon,
+    MaleEmployeeIcon,
+    FemaleEmployeeIcon,
+}
+
+
+
 export const DEPARTMENTS = ["Engineering", "Human Resources", "Marketing", "Sales", "Finance", "Operations", "IT Support", "Customer Success", "Product Management", "Design"];
 
 export const dummyAdminDashboardData = {
