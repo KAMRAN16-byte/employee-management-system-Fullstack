@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { assets, dummyProfileData } from "../assets.jsx";
-import { MenuIcon, X } from "lucide-react";
+import {MenuIcon, PanelLeft, PanelLeftClose, PanelLeftCloseIcon, X} from "lucide-react";
 
 const Sidebar = () => {
     const {pathname} = useLocation();
@@ -19,6 +19,12 @@ const Sidebar = () => {
 
     const toggleMenu = (value) => {
         setMobileOpen(value);
+    }
+
+    const [openSideMenu, setOpenSideMenu] = useState(true);
+
+    const toggleSideMenu = () => {
+        setOpenSideMenu(!openSideMenu);
     }
 
     // eslint-disable-next-line no-constant-binary-expression
@@ -87,8 +93,14 @@ const Sidebar = () => {
             {mobileOpen && <div className={'lg:hidden fixed inset-0 bg-black/20 backdrop-blur-[2px] z-40 animate-fade-in'} onClick={ () => toggleMenu(false)} />}
 
             {/* Sidebar - desktop */}
-            <aside className={"hidden lg:flex flex-col h-full w-65 bg-linear-to-b from-slate-900 via-slate-900 to-slate-950 text-white shrink-0 border-r border-white/4"}>
-                {sidebarContent}
+            <aside className={`relative hidden lg:flex flex-col h-full bg-linear-to-b from-slate-900 via-slate-900 to-slate-950 text-white shrink-0 border-r border-white/4 ${openSideMenu ? "w-65 border-r" : "w-5 border-none"}`}>
+                <button className={`absolute top-6 bg-slate-900 rounded-sm ${openSideMenu ? 'left-62.5' : 'left-3'}`} onClick={ toggleSideMenu }>
+                    <PanelLeftCloseIcon />
+                </button>
+                <div className={'overflow-hidden'}>
+                    {sidebarContent}
+                </div>
+
             </aside>
 
             {/* Sidebar - Mobile */}
