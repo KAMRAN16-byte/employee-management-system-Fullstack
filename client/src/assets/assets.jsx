@@ -1,10 +1,23 @@
 import EmployeeIcon from "./resource/04.png"
 import MaleEmployeeIcon from "./resource/Male_Employee.png"
 import FemaleEmployeeIcon from "./resource/Female_Employee.png.png"
+import DashboardIcon from "./resource/Dashboard.png"
+import EmployeeIcon2 from "./resource/Employees.png"
+import LeaveIcon from "./resource/Leave.png"
+import PayslipsIcon from "./resource/Payslips.png"
+import SettingIcon from "./resource/Setting.png"
+import AttendanceIcon from "./resource/Attendance.png"
+
 export const assets = {
     EmployeeIcon,
     MaleEmployeeIcon,
     FemaleEmployeeIcon,
+    DashboardIcon,
+    EmployeeIcon2,
+    LeaveIcon,
+    PayslipsIcon,
+    SettingIcon,
+    AttendanceIcon,
 }
 
 
