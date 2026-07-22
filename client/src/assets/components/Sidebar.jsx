@@ -38,10 +38,10 @@ const Sidebar = () => {
 
     const navItems = [
         {name: 'Dashboard', route: '/dashboard', icon: assets.DashboardIcon},
-        {name: 'Employees', route: '/employees' , icon: assets.EmployeeIcon2},
         role === 'ADMIN' ?
-            {name: 'Attendance', route: '/attendance' , icon: assets.AttendanceIcon} :
-            {name: 'Leave', route: '/leave' , icon: assets.LeaveIcon},
+            {name: 'Employees', route: '/employees' , icon: assets.EmployeeIcon2} :
+            {name: 'Attendance', route: '/attendance' , icon: assets.AttendanceIcon},
+        {name: 'Leave', route: '/leave' , icon: assets.LeaveIcon},
         {name: 'Payslips', route: '/payslips' , icon:  assets.PayslipsIcon},
         {name: 'Setting', route: '/settings' , icon:  assets.SettingIcon}
     ]
@@ -110,6 +110,11 @@ const Sidebar = () => {
             </div>
 
             {/* Logout */}
+            <div>
+                <button>
+
+                </button>
+            </div>
 
 
 
