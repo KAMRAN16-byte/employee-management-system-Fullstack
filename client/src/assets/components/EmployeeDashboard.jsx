@@ -1,5 +1,7 @@
 import React from 'react'
 import {assets} from "../assets.jsx";
+import {Link} from "react-router-dom";
+import {ArrowRightIcon} from "lucide-react";
 
 const EmployeeDashboard = ({data}) => {
     const emp = data.employee;
@@ -56,6 +58,17 @@ const EmployeeDashboard = ({data}) => {
                     </div>
                     )
                 )}
+            </div>
+            <div className={'flex flex-col sm:flex-row gap-4 mb-10'}>
+
+                <Link to={'/attendance'} className={'group btn-primary text-center inline-flex items-center justify-center gap-3'}>
+                    Mark Attendance <ArrowRightIcon size={15}  className={'group-hover:translate-x-1 transition-transform duration-200'}/>
+                </Link>
+
+                <Link to={'/leave'} className={'group btn-secondary inline-flex items-center justify-center gap-3'}>
+                Apply Leave <ArrowRightIcon size={15}
+                className={'group-hover:translate-x-1 transition-transform duration-200'}/>
+                </Link>
             </div>
         </div>
     );
