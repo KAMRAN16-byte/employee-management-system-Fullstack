@@ -22,7 +22,7 @@
 @layer utilities {
     /* Card styles */
     .card {
-        @apply bg-white rounded-lg border border-slate-200/70;
+        @apply bg-white  rounded-lg border border-slate-200/70 shadow-lg ;
     }
     .card-hover {
         @apply hover:-translate-y-0.5 transition-all duration-300;
