@@ -10,6 +10,11 @@ import AttendanceIcon from "./resource/Attendance.png"
 import BackgroundImage from "./resource/loginbackground.jpg"
 import BackgroundImage2 from "./resource/BackgroundTheme1.jpg"
 import BackgroundImage3 from "./resource/BackgroundTheme2.jpg"
+import LogoutIcon from "./resource/LogoutIcon.png"
+import LoadingIcon from './resource/LoadingIcon.json'
+import EmployeeAttendanceIcon from "./resource/EmployeeDashboardIcons/Calendar.png"
+import EmployeePayslipsIcon from "./resource/EmployeeDashboardIcons/Payslips.png"
+import EmployeeLeaveIcon from "./resource/EmployeeDashboardIcons/Leave.png"
 
 export const assets = {
     EmployeeIcon,
@@ -24,6 +29,11 @@ export const assets = {
     BackgroundImage,
     BackgroundImage2,
     BackgroundImage3,
+    LogoutIcon,
+    LoadingIcon,
+    EmployeeAttendanceIcon,
+    EmployeePayslipsIcon,
+    EmployeeLeaveIcon,
 }
 
 
