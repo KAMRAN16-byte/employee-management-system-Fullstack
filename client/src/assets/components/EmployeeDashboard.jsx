@@ -8,19 +8,19 @@ const EmployeeDashboard = ({data}) => {
 
     const cards = [
         {
-            icon:assets.EmployeeAttendanceIcon,
+            icon:assets.AttendanceIconRed,
             value: data.currentMonthAttendance,
             title: "Days Present",
             subtitle: "This month",
         },
         {
-            icon: assets.EmployeeLeaveIcon,
+            icon: assets.LeaveIconRed,
             value: data.pendingLeaves,
             title: "Pending Leaves",
             subtitle: "Awaiting approval",
         },
         {
-            icon: assets.EmployeePayslipsIcon,
+            icon: assets.PayslipsIconRed,
             value: data.latestPayslip ? `$${data.latestPayslip.netSalary?.toLocaleString()}` : "N/A",
             title: "latest Payslip",
             subtitle: "Most recent payout",
