@@ -12,9 +12,9 @@ import BackgroundImage2 from "./resource/BackgroundTheme1.jpg"
 import BackgroundImage3 from "./resource/BackgroundTheme2.jpg"
 import LogoutIcon from "./resource/LogoutIcon.png"
 import LoadingIcon from './resource/LoadingIcon.json'
-import EmployeeAttendanceIcon from "./resource/EmployeeDashboardIcons/Calendar.png"
-import EmployeePayslipsIcon from "./resource/EmployeeDashboardIcons/Payslips.png"
-import EmployeeLeaveIcon from "./resource/EmployeeDashboardIcons/Leave.png"
+import EmployeeAttendanceIcon from "./resource/DashboardIcons/Calendar.png"
+import EmployeePayslipsIcon from "./resource/DashboardIcons/Payslips.png"
+import EmployeeLeaveIcon from "./resource/DashboardIcons/Leave.png"
 
 export const assets = {
     EmployeeIcon,
