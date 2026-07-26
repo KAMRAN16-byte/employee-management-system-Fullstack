@@ -33,6 +33,10 @@ const Sidebar = () => {
         setOpenSideMenu(!openSideMenu);
     }
 
+    const handleLogout = ()=> {
+        window.location.href = "/login";
+    }
+
     // eslint-disable-next-line no-constant-binary-expression
     const role = "" || "Employee";
 
@@ -49,7 +53,7 @@ const Sidebar = () => {
     const sidebarContent = (
         <>
             {/* Brand Header */}
-            <div className={'px-5 pt-6 pb-5 border-white/6'}>
+            <div className={'px-5 pt-6 pb-5 border border-white/6'}>
                 <div className={'flex items-center justify-between'}>
                     <div className={'flex items-center gap-3 shrink-0'}>
                         <img src={assets.EmployeeIcon} alt={'Employee Image'} className={'size-7 border border-white/20 bg-white/35 backdrop-blur-2xl rounded-xl'} />
@@ -92,7 +96,7 @@ const Sidebar = () => {
             </div>
 
             {/* Navigation List */}
-            <div className={'flex-1 px-3 space-y-0.5 overflow-y-auto overflow-hidden'}>
+            <div className={'flex-1 px-3 space-y-0.5 overflow-y-auto lg:overflow-hidden'}>
                 {navItems.map((item) => {
                     const isActive = pathname.startsWith(item.route)
                     return (
@@ -110,9 +114,11 @@ const Sidebar = () => {
             </div>
 
             {/* Logout */}
-            <div>
-                <button>
-
+            <div className={'p-3 border-t border-white/6 overflow-hidden'}>
+                <button className={'flex items-center gap-3 w-full px-3 py-2.5 rounded-md text-[13px] font-medium text-slate-400 hover:text-rose-400 hover:bg-rose-500/8 transition-all duration-150 overflow-hidden'} onClick={handleLogout}>
+                    { /*<LogOutIcon className={'w-4.25 h-4.25 shrink-0'} />*/}
+                    <img src={assets.LogoutIcon} className={'w-8 h-8 shrink-0'} alt={'logout icon'}/>
+                    <span className={'whitespace-nowrap'}>Log out</span>
                 </button>
             </div>
 
@@ -133,21 +139,21 @@ const Sidebar = () => {
             {mobileOpen && <div className={'lg:hidden fixed inset-0 bg-black/20 backdrop-blur-[2px] z-40 animate-fade-in'} onClick={ () => toggleMenu(false)} />}
 
             {/* Sidebar - desktop */}
-            <aside className={`relative hidden lg:flex flex-col h-full bg-linear-to-b from-slate-900 via-slate-900 to-slate-950 text-white shrink-0 border-r border-white/4  transition-all duration-300 ease-in-out ${openSideMenu ? "w-65 border-r" : "w-5 border-none rounded-r-xl"}`}>
+            <aside className={`relative hidden lg:flex flex-col h-full bg-linear-to-b from-slate-900 to-slate-950 text-white shrink-0 border-r border-white/4  transition-all duration-300 ease-in-out ${openSideMenu ? "w-65 border-r" : "w-5 border-none rounded-r-xl"}`}>
                 <div className={`absolute w-0.5  bg-primary-500 transition-all duration-800 ${openSideMenu ? 'h-full': 'h-0'}`}>
                 </div>
                 <button className={`group absolute top-6 bg-slate-900 rounded-sm transition-all duration-350 ${openSideMenu ? 'left-62' : 'left-2'}`} onClick={ toggleSideMenu }>
                     <PanelLeft size={30}  className={'group-hover:hidden'}/>
                     {openSideMenu ? <PanelLeftCloseIcon  className={'hidden group-hover:block '} size={30}/> : <PanelLeftOpenIcon className={'hidden group-hover:block'} size={30}/> }
                 </button>
-                <div className={`overflow-hidden ${openSideMenu ? 'opacity-100' : 'opacity-0'} transition-opacity duration-400`}>
+                <div className={`flex flex-col h-full overflow-hidden ${openSideMenu ? 'opacity-100' : 'opacity-0'} transition-opacity duration-400`}>
                     {sidebarContent}
                 </div>
 
             </aside>
 
             {/* Sidebar - Mobile */}
-            <aside className={`lg:hidden fixed inset-y-0 left-0 w-72 bg-linear-to-b from-slate-900 via-slate-900 to-slate-950 text-white z-50 flex flex-col transform transition-transform
+            <aside className={`lg:hidden fixed inset-y-0 left-0 w-72 bg-linear-to-b from-slate-900  to-slate-950 text-white z-50 flex flex-col transform transition-transform
             duration-300 ${mobileOpen ? 'translate-x-0' : '-translate-x-full'}`}>
                 <div className={`absolute w-0.5  bg-primary-500 transition-all duration-1000 delay-350 ${mobileOpen ? 'h-full': 'h-0'}`}>
                 </div>
