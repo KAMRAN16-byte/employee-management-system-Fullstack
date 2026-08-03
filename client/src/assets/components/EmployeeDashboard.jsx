@@ -21,7 +21,7 @@ const EmployeeDashboard = ({data}) => {
         },
         {
             icon: assets.PayslipsIconRed,
-            value: data.latestPayslip ? `$${data.latestPayslip.netSalary?.toLocaleString()}` : "N/A",
+            value: data.latestPayslip ? `\u20B9${data.latestPayslip.netSalary?.toLocaleString()}` : "N/A",
             title: "latest Payslip",
             subtitle: "Most recent payout",
         },
