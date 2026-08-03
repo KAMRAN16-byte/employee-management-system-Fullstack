@@ -7,9 +7,10 @@ import AdminDashboard from "../components/AdminDashboard.jsx";
 const Dashboard = () => {
     const [data,setData] = useState(null);
     const [loading, setLoading] = useState(true);
+
     useEffect(() => {
         // eslint-disable-next-line react-hooks/set-state-in-effect
-        setData(dummyEmployeeDashboardData)
+        setData(dummyAdminDashboardData)
         setLoading(true)
         setTimeout(()=>{
             setLoading(false);
